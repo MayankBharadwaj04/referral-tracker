@@ -109,51 +109,84 @@ function JobDetail({ job, setSelectedJob, jobs, setJobs }) {
             </div>
 
             <div className="grid grid-cols-1 gap-3">
-              <select
-                className="input"
-                value={p.connection}
-                onChange={(e) =>
-                  updateStatus(p.id, "connection", e.target.value)
-                }
-              >
-                <option value="sent">Connection Sent</option>
-                <option value="accepted">Accepted</option>
-              </select>
 
-              <select
-                className="input"
-                value={p.message}
-                onChange={(e) => updateStatus(p.id, "message", e.target.value)}
-              >
-                <option value="not_sent">Message Not Sent</option>
-                <option value="sent">Sent</option>
-                <option value="replied">Replied</option>
-              </select>
+              <div>
+                <label className="text-xs text-gray-500">
+                  Connection Status
+                </label>
+                <select
+                  className="input"
+                  value={p.connection}
+                  onChange={(e) =>
+                    updateStatus(p.id, "connection", e.target.value)
+                  }
+                >
+                  <option value="sent">Request Sent</option>
+                  <option value="accepted">Accepted</option>
+                </select>
+              </div>
 
-              <select
-                className="input"
-                value={p.referral}
-                onChange={(e) => updateStatus(p.id, "referral", e.target.value)}
-              >
-                <option value="not_asked">Not Asked</option>
-                <option value="asked">Asked</option>
-                <option value="referred">Referred</option>
-                <option value="ignored">Ignored</option>
-              </select>
+              <div>
+                <label className="text-xs text-gray-500">
+                  Message Status
+                </label>
+                <select
+                  className="input"
+                  value={p.message}
+                  onChange={(e) =>
+                    updateStatus(p.id, "message", e.target.value)
+                  }
+                >
+                  <option value="not_sent">Not Sent</option>
+                  <option value="sent">Sent</option>
+                  <option value="replied">Replied</option>
+                </select>
+              </div>
 
-              <textarea
-                className="input"
-                placeholder="Notes"
-                value={p.notes}
-                onChange={(e) => updateStatus(p.id, "notes", e.target.value)}
-              />
+              <div>
+                <label className="text-xs text-gray-500">
+                  Referral Status
+                </label>
+                <select
+                  className="input"
+                  value={p.referral}
+                  onChange={(e) =>
+                    updateStatus(p.id, "referral", e.target.value)
+                  }
+                >
+                  <option value="not_asked">Not Asked</option>
+                  <option value="asked">Asked</option>
+                  <option value="referred">Referred</option>
+                  <option value="ignored">Ignored</option>
+                </select>
+              </div>
 
-              <input
-                type="date"
-                className="input"
-                value={p.followUp}
-                onChange={(e) => updateStatus(p.id, "followUp", e.target.value)}
-              />
+              <div>
+                <label className="text-xs text-gray-500">Notes</label>
+                <textarea
+                  className="input"
+                  placeholder="What did they say?"
+                  value={p.notes}
+                  onChange={(e) =>
+                    updateStatus(p.id, "notes", e.target.value)
+                  }
+                />
+              </div>
+
+              <div>
+                <label className="text-xs text-gray-500">
+                  Follow-up Date
+                </label>
+                <input
+                  type="date"
+                  className="input"
+                  value={p.followUp}
+                  onChange={(e) =>
+                    updateStatus(p.id, "followUp", e.target.value)
+                  }
+                />
+              </div>
+
             </div>
           </div>
         ))}
