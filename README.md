@@ -1,16 +1,39 @@
-# React + Vite
+# Referral Tracker
+A simple web app to track job applications and referrals. Helps job seekers manage companies, contacts, messages, and follow-ups in one place so they don’t lose track of their job search process.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Problem
+When applying for jobs, it's hard to keep track of:
+- Which companies you applied to
+- Who you contacted for referrals
+- Who replied and who didn't
+- Follow-ups and notes
 
-Currently, two official plugins are available:
+## 💡 Solution
+This tool helps you:
+- Track job applications
+- Manage people you contacted
+- Track connection, message, and referral status
+- Add notes and follow-up dates
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Features
+- Add jobs (company, role, job ID, link)
+- Add people under each job
+- Track:
+  - Connection status
+  - Message status
+  - Referral status
+- Add notes and follow-up dates
 
-## React Compiler
+## 🧑‍💻 Tech Stack
+- React (Vite)
+- JavaScript
+- Basic CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌐 Live Demo
+(Add your Vercel link here)
 
-## Expanding the ESLint configuration
+## 📌 Status
+MVP (Minimum Viable Product)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🙌 Feedback
+Open to feedback and suggestions!
